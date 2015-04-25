@@ -1,0 +1,20 @@
+<plate name="itemList">
+	<css inherit="true">
+	ul {
+		li {
+			list-style: none;
+		}
+	}
+	</css>
+	<ul>
+		- Product List
+		<item ng-repeat="item in itemList">
+			<script event="click(item)">
+			$scope.$emit("item.click", item);
+			</script>
+		</item>
+		<script>
+		$scope.itemList = [];
+		</script>
+	</ul>
+</plate>
